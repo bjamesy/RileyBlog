@@ -1,0 +1,94 @@
+body {
+    background-color: #000;
+}
+
+#landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 20s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://i.imgur.com/Psqj7mv.gif); 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://misfitsarchitecture.com/wp-content/uploads/2017/09/nostalghia-final-scene.jpg);
+  animation-delay: 3s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://www.heyuguys.co.uk/images/2013/11/Inside-Llewyn-Davis-585x350.jpg);
+  animation-delay: 8s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(http://thedarkravine.com/wp-content/uploads/2016/10/spiderman_img.jpeg);
+  animation-delay: 13s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://media.giphy.com/media/xUOwFTAMK3sFqWSxiM/giphy.gif
+  );
+  animation-delay: 18s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+/* preloader animation */
+#loading {
+    background: url("https://t1.daumcdn.net/cfile/tistory/230C484B56D585491E") no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+}
