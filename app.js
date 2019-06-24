@@ -24,7 +24,7 @@ app.use(methodOverride("_method"));
 // ******************************************
 
 app.use(session({
-    secret: "Riley likes mens butts",
+    secret: "Riley love films",
     resave: false, 
     // if true would save to sessions after each request
     saveUninitialized: false
